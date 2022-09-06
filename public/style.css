@@ -1,0 +1,54 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f7f3f3;
+
+}
+
+input[type='submit'] {
+
+  margin: 10px auto;
+  background-color: black;
+  color: white;
+  border: 0px;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  color: black;
+}
+
+form {
+  text-align: center;
+
+}
+
+input[type='url'] {
+  padding: 8px;
+  width: 30%;
+  margin-right: 0;
+}
+
+p.error {
+  color: rgb(245, 53, 53);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.short-url a {
+  color: rgb(77, 213, 77);
+  text-decoration: none;
+
+}
+
+.short-url {
+  margin: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(77, 213, 77);
+  text-align: center;
+
+}
