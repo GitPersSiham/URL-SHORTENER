@@ -4,7 +4,6 @@ const config = require('config')
 const createHttpError = require('http-errors')
 let ids = require('short-id');
 const axios = require('axios')
-const validUrl = require('valid-url');
 const ShortUrl = require('../models/url.model')
 
 const router = express.Router();
