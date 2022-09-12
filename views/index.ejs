@@ -19,7 +19,11 @@
        <div class="success"> success ! <br>Here is your link :
       <a href="<%= short_url %>">
         <%= short_url %> </a></div>
+        
       <% } %>
+      <% if (locals.ttl_date) { %>
+        <small class="countdown" id="countdown">link will expires in :  <%= ttl_date %></small>
+        <% }%>
       <% if (locals.error) { %>
         <p class="error"><%= error %></p>
         <% }%>

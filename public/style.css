@@ -52,3 +52,10 @@ p.error {
   text-align: center;
 
 }
+
+.short-url .countdown {
+  color: rgb(45, 42, 42) !important;
+  margin-top: 5px;
+  font-size: 12px;
+  font-style: italic;
+}

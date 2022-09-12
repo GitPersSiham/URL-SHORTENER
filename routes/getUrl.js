@@ -7,7 +7,8 @@ const ShortUrl = require('../models/url.model')
 const router = express.Router();
 
 router.get('/', async (req, res, next) => {
-    res.render('index')
+  const shortUrls = await ShortUrl.find();
+    res.render('index',{shortUrls: shortUrls})
   })
 
  // @routes GET /:shortId
@@ -19,10 +20,11 @@ router.get('/', async (req, res, next) => {
       if (!result) {
         throw createHttpError.NotFound('Short url does not exist')
       }
-      res.redirect(result.url)
+      res.redirect(result.originalUrl)
     } catch (error) {
       next(error)
     }
+   
   })
 
   module.exports = router;
