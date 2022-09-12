@@ -20,13 +20,11 @@ if(req.body.url){
     if (url) {
       res.render("index",{ short_url: `${process.env.BASE_URL}/${url.shortId}`, status: 200 });
     } else {
-      // make a request with Axios
       const response = await axios.get(req.body.url.toString(), {
         validateStatus: (status) => {
           return status < 500;
         },
       });
-
       if (response.status != 404) {
         let newUrl;
         while (true) {
@@ -40,11 +38,6 @@ if(req.body.url){
             break;
           }
         }
-
-        /*res.json({
-          short: `${process.env.URL}/${newUrl.slug}`,
-          status: response.status,
-        });*/
         res.render('index', {short_url:`${process.env.BASE_URL}/${newUrl.shortId}` })
       } else {
         res.json({
